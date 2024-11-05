@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     const fetchFormData = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/auth/get-form-data');
+        const response = await axios.get('https://registration-form-backend-9qb3.onrender.com/api/auth/get-form-data');
         console.log("response", response);
         setFormDataList(response.data);
       } catch (error) {
