@@ -1,0 +1,12 @@
+.cityandstates{
+    display: block;
+}
+.box-1{
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+.select-box{
+    height: 50%;
+    width: 100%;
+}
