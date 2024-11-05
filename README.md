@@ -48,4 +48,4 @@ These instructions will help you set up the project on your local machine for de
    cd your-repo-name
 ## Demo
 
-![Demo of the Application]([media/demo.gif](https://drive.google.com/file/d/1bhJIZLFCjCeyS1W-okFB9MulPAc0uCfI/view?usp=sharing))
+![Demo of the Application](https://drive.google.com/file/d/1bhJIZLFCjCeyS1W-okFB9MulPAc0uCfI/view?usp=sharing)
