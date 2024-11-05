@@ -42,7 +42,7 @@ function App() {
       try {
         console.log("submit edit id", editData.id,updatedData);
         // Send a PUT request to update the data in the database
-        const response = await axios.put(`http://localhost:8080/api/auth/edit/${editData.id}`, updatedData);
+        const response = await axios.put(`https://registration-form-backend-9qb3.onrender.com/api/auth/edit/${editData.id}`, updatedData);
 
         // Update the local list only if the API call was successful
         if (response.status === 200) {
@@ -63,7 +63,7 @@ function App() {
   const handleDelete = async (id: number) => {
     try {
       console.log("id", id);
-      const response = await axios.delete(`http://localhost:8080/api/auth/delete/${id}`);
+      const response = await axios.delete(`https://registration-form-backend-9qb3.onrender.com/api/auth/delete/${id}`);
       if (response.status === 200) {
         console.log('User deleted successfully');
         setFormDataList(formDataList.filter(data => data.id !== id)); // Remove deleted entry from local state
