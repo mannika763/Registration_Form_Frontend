@@ -44,7 +44,7 @@ interface FormData {
     
       const fetchUsers = async () => {
         try {
-            const response = await axios.get('https://registration-form-backend-9qb3.onrender.com/api/auth/get-form-data');
+            const response = await axios.get('http://localhost:8080/api/auth/get-form-data');
             setFormData(response.data); // Update users state with fetched data
         } catch (error) {
             console.error('Error fetching users:', error);
@@ -54,13 +54,13 @@ interface FormData {
     const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault(); // Prevent any default button behavior
         const newId = generateRandomId(); // Generate a new random ID
-        const newFormData = { ...formData, id: newId }; // Set the new ID in formData
+        const newFormData = { ...formData }; // Set the new ID in formData
 
         try {
-            const response = await axios.post('https://registration-form-backend-9qb3.onrender.com/api/auth/submit-form', formData);
+            const response = await axios.post('http://localhost:8080/api/auth/submit-form', formData);
             
             if (response.status === 201) { // Check for a successful creation
-                console.log('Form submitted successfully');
+                console.log('Form submitted successfully',newFormData);
                 onSubmit(newFormData); // Call onSubmit only after successful submission
                 await fetchUsers(); // Fetch updated user list
                 // Reset the form data after successful submission
